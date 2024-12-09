@@ -1,8 +1,10 @@
 ---
 title: 大模型调研-Qwen2和Qwen2VL
+date: 2024-12-01
+update: 2024-12-10
 cover: /img/huggingface.png
 top_img: /img/huggingface_long.png
-description: 大模型调研-Qwen2和Qwen2VL
+description: 这是一个测试, 让我们多说两句话看一下, 测试一下, 了解一下, 知道具体应该是如何显示的, 之后我们再逐步完善.
 keywords: 大语言模型, 图文大模型, Qwen
 ---
 
