@@ -2,6 +2,8 @@
 title: 大模型调研-Qwen2和Qwen2VL
 cover: /img/huggingface.png
 top_img: /img/huggingface_long.png
+description: 大模型调研-Qwen2和Qwen2VL
+keywords: 大语言模型, 图文大模型, Qwen
 ---
 
 # 模型结构
