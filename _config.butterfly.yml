@@ -44,15 +44,16 @@ code_blocks:
   copy: true
   language: true
   # true: shrink the code blocks | false: expand the code blocks | none: expand code blocks and hide the button
-  shrink: true
+  shrink: false
   fullpage: true
+  highlight_height_limit: 200
 
 # Social media links
 # Formal:
 #   icon: link || the description || color
 social:
-  # fab fa-github: https://github.com/xxxxx || Github || '#24292e'
-  # fas fa-envelope: mailto:xxxxxx@gmail.com || Email || '#4a7dbe'
+  fab fa-github: https://github.com/li508q || Github || '#24292e'
+  fas fa-envelope: mailto:liqian508@outlook.com || Email || '#4a7dbe'
 
 # --------------------------------------
 # Image Settings
@@ -61,7 +62,7 @@ social:
 favicon: /img/favicon.png
 
 avatar:
-  img: /img/butterfly-icon.png
+  img: /img/avatar.jpg
   effect: false
 
 # Disable all banner images
