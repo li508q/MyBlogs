@@ -1,6 +1,7 @@
 ---
 title: 大模型调研-Qwen2和Qwen2VL
 cover: /img/huggingface.png
+top_img: /img/huggingface_long.png
 ---
 
 # 模型结构
