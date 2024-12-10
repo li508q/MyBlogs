@@ -1,7 +1,10 @@
 ---
 title: 大模型调研-Qwen2和Qwen2VL
+date: 2024-12-10 12:00:00
 cover: /img/huggingface.png
 top_img: /img/huggingface_long.png
+tags: 大模型调研
+categories: 算法
 ---
 
 # 模型结构

@@ -1,7 +1,10 @@
 ---
 title: 大模型基础-01-GPT的数据流向和损失计算, 以及SFT情景下的处理
+date: 2024-12-01 12:00:00
 cover: /img/huggingface.png
 top_img: /img/huggingface_long.png
+tags: 大模型基础
+categories: 算法
 ---
 
 1. **模型结构与序列长度的关系**  

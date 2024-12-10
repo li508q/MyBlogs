@@ -1,5 +1,8 @@
 ---
 title: 分布式-02-DeepSpeed
+date: 2024-10-30 12:00:00
+tags: 分布式训练
+categories: 系统
 ---
 
 > **Accelerate** 集成了 **DeepSpeed ZeRO** 的所有功能。这包括 **ZeRO** 的第 1、2 和 3 阶段，以及 **ZeRO-Offload**、**ZeRO-Infinity**（可以卸载到 Disk/NVMe）和 **ZeRO++**。

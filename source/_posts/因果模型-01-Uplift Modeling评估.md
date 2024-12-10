@@ -1,5 +1,8 @@
 ---
 title: 因果模型-01-Uplift Modeling评估
+date: 2024-11-13 12:00:00
+tags: 因果模型
+categories: 评测
 ---
 
 1. 明确三个量

@@ -1,7 +1,10 @@
 ---
 title: Huggingface-基础部分-07-模型保存和加载
+date: 2024-12-10 11:00:00
 cover: /img/huggingface.png
 top_img: /img/huggingface_long.png
+tags: Huggingface
+categories: 算法
 ---
 
 ## 从 `torch` 开始
