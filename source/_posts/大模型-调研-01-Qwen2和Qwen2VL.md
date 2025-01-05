@@ -1,5 +1,5 @@
 ---
-title: 大模型调研-Qwen2和Qwen2VL
+title: 大模型-调研-01-Qwen2和Qwen2VL
 top: 999
 date: 2024-12-15 12:00:00
 updated: 2024-12-15 12:00:00
