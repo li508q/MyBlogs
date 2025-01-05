@@ -1,6 +1,7 @@
 ---
 title: 分布式-01-DP和DDP
 date: 2024-10-30 11:00:00
+updated: 2024-10-30 11:00:00
 tags: 分布式训练
 categories: 系统
 ---
