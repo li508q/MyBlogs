@@ -5,7 +5,7 @@ updated: 2024-11-16 12:00:00
 cover: /img/huggingface.png
 top_img: /img/huggingface_long.png
 tags: Huggingface
-categories: 算法
+categories: 框架
 ---
 
 ## 基本使用
