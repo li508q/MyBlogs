@@ -1,0 +1,197 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>IAN's SITE - Welcome to My Blog</title><meta name="author" content="LI QIAN"><meta name="copyright" content="LI QIAN"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta property="og:type" content="website">
+<meta property="og:title" content="IAN&#39;s SITE">
+<meta property="og:url" content="https://blog.iansite.tech/page/3/index.html">
+<meta property="og:site_name" content="IAN&#39;s SITE">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://blog.iansite.tech/img/avatar.jpg">
+<meta property="article:author" content="LI QIAN">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://blog.iansite.tech/img/avatar.jpg"><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="https://blog.iansite.tech/page/3/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css"><script>
+    (() => {
+      
+    const saveToLocal = {
+      set: (key, value, ttl) => {
+        if (!ttl) return
+        const expiry = Date.now() + ttl * 86400000
+        localStorage.setItem(key, JSON.stringify({ value, expiry }))
+      },
+      get: key => {
+        const itemStr = localStorage.getItem(key)
+        if (!itemStr) return undefined
+        const { value, expiry } = JSON.parse(itemStr)
+        if (Date.now() > expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return value
+      }
+    }
+
+    window.btf = {
+      saveToLocal,
+      getScript: (url, attr = {}) => new Promise((resolve, reject) => {
+        const script = document.createElement('script')
+        script.src = url
+        script.async = true
+        Object.entries(attr).forEach(([key, val]) => script.setAttribute(key, val))
+        script.onload = script.onreadystatechange = () => {
+          if (!script.readyState || /loaded|complete/.test(script.readyState)) resolve()
+        }
+        script.onerror = reject
+        document.head.appendChild(script)
+      }),
+      getCSS: (url, id) => new Promise((resolve, reject) => {
+        const link = document.createElement('link')
+        link.rel = 'stylesheet'
+        link.href = url
+        if (id) link.id = id
+        link.onload = link.onreadystatechange = () => {
+          if (!link.readyState || /loaded|complete/.test(link.readyState)) resolve()
+        }
+        link.onerror = reject
+        document.head.appendChild(link)
+      }),
+      addGlobalFn: (key, fn, name = false, parent = window) => {
+        if (!false && key.startsWith('pjax')) return
+        const globalFn = parent.globalFn || {}
+        globalFn[key] = globalFn[key] || {}
+        globalFn[key][name || Object.keys(globalFn[key]).length] = fn
+        parent.globalFn = globalFn
+      }
+    }
+  
+      
+      const activateDarkMode = () => {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      const activateLightMode = () => {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+
+      btf.activateDarkMode = activateDarkMode
+      btf.activateLightMode = activateLightMode
+
+      const theme = saveToLocal.get('theme')
+    
+          theme === 'dark' ? activateDarkMode() : theme === 'light' ? activateLightMode() : null
+        
+      
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        document.documentElement.classList.toggle('hide-aside', asideStatus === 'hide')
+      }
+    
+      
+    const detectApple = () => {
+      if (/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)) {
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+  
+    })()
+  </script><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false,"highlightFullpage":true,"highlightMacStyle":true},
+  copy: {
+    success: '复制成功',
+    error: '复制失败',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  dateSuffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'null',
+  Snackbar: undefined,
+  infinitegrid: {
+    js: 'https://cdn.jsdelivr.net/npm/@egjs/infinitegrid/dist/infinitegrid.min.js',
+    buttonText: '加载更多'
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: false,
+  },
+  autoDarkmode: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: 'IAN\'s SITE',
+  isPost: false,
+  isHome: true,
+  isHighlightShrink: false,
+  isToc: false,
+  isShuoshuo: false
+}</script><!-- hexo injector head_end start -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css">
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/hexo-math@4.0.0/dist/style.css">
+<!-- hexo injector head_end end --><meta name="generator" content="Hexo 7.3.0"></head><body><div id="web_bg" style="background: linear-gradient(20deg, #dfb7ac, #a99cad, #9f8fa7, #a99cad);"></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img text-center"><img src="/img/avatar.jpg" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data text-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">23</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">8</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">3</div></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 主页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 时间轴</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友情链接</span></a></div></div></div></div><div class="page" id="body-wrap"><header class="full_page" id="page-header" style="background-image: url(/img/spider_man.jpg);"><nav id="nav"><span id="blog-info"><a class="nav-site-title" href="/"><span class="site-name">IAN's SITE</span></a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 主页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 时间轴</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友情链接</span></a></div></div><div id="toggle-menu"><span class="site-page"><i class="fas fa-bars fa-fw"></i></span></div></div></nav><div id="site-info"><h1 id="site-title">IAN's SITE</h1><div id="site_social_icons"><a class="social-icon" href="https://github.com/li508q" target="_blank" title="Github"><i class="fab fa-github" style="color: #24292e;"></i></a><a class="social-icon" href="mailto:liqian508@outlook.com" target="_blank" title="Email"><i class="fas fa-envelope" style="color: #4a7dbe;"></i></a></div></div><div id="scroll-down"><i class="fas fa-angle-down scroll-down-effects"></i></div></header><main class="layout" id="content-inner"><div class="recent-posts nc" id="recent-posts"><div class="recent-post-items"><div class="recent-post-item"><div class="post_cover left"><a href="/2024/10/01/Huggingface-%E5%9F%BA%E7%A1%80%E9%83%A8%E5%88%86-02-Tokenizer/" title="Huggingface-基础部分-02-Tokenizer"><img class="post-bg" src="/img/huggingface.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Huggingface-基础部分-02-Tokenizer"></a></div><div class="recent-post-info"><a class="article-title" href="/2024/10/01/Huggingface-%E5%9F%BA%E7%A1%80%E9%83%A8%E5%88%86-02-Tokenizer/" title="Huggingface-基础部分-02-Tokenizer">Huggingface-基础部分-02-Tokenizer</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2024-10-01T04:00:00.000Z" title="发表于 2024-10-01 12:00:00">2024-10-01</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E7%AE%97%E6%B3%95/">算法</a></span></div><div class="content">基本使用在自然语言处理(NLP)任务中, 文本需要被模型理解和处理, 而最关键的一步就是“分词” (tokenization). HuggingFace 提供了非常强大且易用的分词工具, 能够快速实现从文本到模型可处理的张量(tensor)的转换:   加载保存(from_pretrained / save_pretrained)  句子分词(tokenize)  查看词典(vocab)  索引转换(convert_tokens_to_ids / convert_ids_to_tokens)  填充截断(padding / truncation)  其他输入(attention_mask / token_type_ids)   123456789101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960from transformers import AutoTokenizersen = &quot;弱小的我也有大梦想!&quot;#...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2024/09/30/%E6%A8%A1%E5%9E%8B%E8%AF%84%E4%BC%B0-01-PSI/" title="模型评估-01-PSI">模型评估-01-PSI</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2024-09-30T04:00:00.000Z" title="发表于 2024-09-30 12:00:00">2024-09-30</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E8%AF%84%E6%B5%8B/">评测</a></span></div><div class="content"> Population Stability Index (PSI) 是评估特征分布稳定性的重要指标，广泛应用于模型开发和部署阶段。通过在建模前筛除不稳定特征和在建模后监控模型稳定性，PSI 有助于提升模型的可靠性和准确性。理解和正确应用 PSI 是构建高效稳健分类模型的关键步骤。  PSI 的用途 建模前：用于筛除不稳定特征在模型开发之前，通过计算特征的 PSI 值，可以识别和剔除那些在不同时间段或不同数据集中表现不稳定的特征，从而提高模型的稳健性和泛化能力。  建模后：用于衡量和监控模型稳定性在模型部署后，定期计算 PSI 值可以监控模型的输入特征是否发生了显著变化。如果 PSI 值超出预设的阈值，可能意味着模型需要重新训练或调整，以适应新的数据分布。   PSI 的计算数据划分PSI 是对两个时间点或两个数据集中的特征数据进行计算。具体步骤如下：  选择基准集（Base 集）和测试集（Test 集）    基准集（Base 集）：通常是模型训练时使用的数据集，或某一固定时间点的数据。 测试集（Test...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2024/09/30/%E6%A0%91%E6%A8%A1%E5%9E%8B-01-ID3,%20C4.5,%20CART/" title="树模型-01-ID3, C4.5, CART">树模型-01-ID3, C4.5, CART</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2024-09-30T03:00:00.000Z" title="发表于 2024-09-30 11:00:00">2024-09-30</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E7%AE%97%E6%B3%95/">算法</a></span></div><div class="content"> ID3：基于信息增益（越大越好），信息增益衡量了特征带来的信息减少量，即通过选择特征 $A$，数据集的熵减少多少。 C4.5：基于信息增益比（越大越好），通过对比信息增益与特征自身的固有信息，避免偏向具有较多取值的特征。 CART： 回归树：最小化平方误差（MSE），通过减小预测误差来选择最佳分裂特征。 分类树：最小化基尼指数（越小越好），通过选择能最大程度提高数据集纯度的特征进行分裂。    先验知识自信息自信息(Self-Information)度量了某个事件发生的不确定性大小。假设某个事件发生的概率为 $p$ ，那么该事件的自信息定义为：  I(x) = - \log_2 p(x)熵(数据集 $S$ 自信息的期望)熵(Entropy)度量了数据集中的不确定性（或者说是纯度）。给定的一个数据集 $S$ ，其熵越高，数据集的不确定性越大。数据集 $S$ 的熵定义为：  Entropy(S) = - \sum_{i=1}^{k} p_i \log_2 p_i其中，$p_i$ 是类别 $i$ 在数据集 $S$ 中的概率分布。 信息增益信息增益(Information...</div></div></div></div><nav id="pagination"><div class="pagination"><a class="extend prev" rel="prev" href="/page/2/#content-inner"><i class="fas fa-chevron-left fa-fw"></i></a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/#content-inner">2</a><span class="page-number current">3</span></div></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info text-center"><div class="avatar-img"><img src="/img/avatar.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info-name">LI QIAN</div><div class="author-info-description"></div><div class="site-data"><a href="/archives/"><div class="headline">文章</div><div class="length-num">23</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">8</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">3</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/li508q"><i class="fab fa-github"></i><span>Follow Me</span></a><div class="card-info-social-icons"><a class="social-icon" href="https://github.com/li508q" target="_blank" title="Github"><i class="fab fa-github" style="color: #24292e;"></i></a><a class="social-icon" href="mailto:liqian508@outlook.com" target="_blank" title="Email"><i class="fas fa-envelope" style="color: #4a7dbe;"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">This is my Blog</div></div><div class="sticky_layout"><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2025/01/05/Huggingface-PEFT-01-Prompt-Tuning/" title="Huggingface-PEFT-01-Prompt-Tuning"><img src="/img/huggingface.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Huggingface-PEFT-01-Prompt-Tuning"/></a><div class="content"><a class="title" href="/2025/01/05/Huggingface-PEFT-01-Prompt-Tuning/" title="Huggingface-PEFT-01-Prompt-Tuning">Huggingface-PEFT-01-Prompt-Tuning</a><time datetime="2025-01-05T04:00:00.000Z" title="发表于 2025-01-05 12:00:00">2025-01-05</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2025/01/04/Huggingface-PreTrain-02-CausalLM(GPT)/" title="Huggingface-PreTrain-02-CausalLM(GPT)"><img src="/img/huggingface.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Huggingface-PreTrain-02-CausalLM(GPT)"/></a><div class="content"><a class="title" href="/2025/01/04/Huggingface-PreTrain-02-CausalLM(GPT)/" title="Huggingface-PreTrain-02-CausalLM(GPT)">Huggingface-PreTrain-02-CausalLM(GPT)</a><time datetime="2025-01-04T06:00:00.000Z" title="发表于 2025-01-04 14:00:00">2025-01-04</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2025/01/04/Huggingface-PreTrain-01-MLM/" title="Huggingface-PreTrain-01-MLM"><img src="/img/huggingface.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Huggingface-PreTrain-01-MLM"/></a><div class="content"><a class="title" href="/2025/01/04/Huggingface-PreTrain-01-MLM/" title="Huggingface-PreTrain-01-MLM">Huggingface-PreTrain-01-MLM</a><time datetime="2025-01-04T04:00:00.000Z" title="发表于 2025-01-04 12:00:00">2025-01-04</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2024/12/10/%E5%A4%A7%E6%A8%A1%E5%9E%8B%E8%B0%83%E7%A0%94-01-Qwen2%E5%92%8CQwen2VL/" title="大模型调研-Qwen2和Qwen2VL"><img src="/img/huggingface.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="大模型调研-Qwen2和Qwen2VL"/></a><div class="content"><a class="title" href="/2024/12/10/%E5%A4%A7%E6%A8%A1%E5%9E%8B%E8%B0%83%E7%A0%94-01-Qwen2%E5%92%8CQwen2VL/" title="大模型调研-Qwen2和Qwen2VL">大模型调研-Qwen2和Qwen2VL</a><time datetime="2024-12-10T04:00:00.000Z" title="发表于 2024-12-10 12:00:00">2024-12-10</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2024/12/01/%E5%A4%A7%E6%A8%A1%E5%9E%8B%E5%9F%BA%E7%A1%80-01-GPT%E7%9A%84%E6%95%B0%E6%8D%AE%E6%B5%81%E5%90%91%E5%92%8C%E6%8D%9F%E5%A4%B1%E8%AE%A1%E7%AE%97,%20%E4%BB%A5%E5%8F%8ASFT%E6%83%85%E6%99%AF%E4%B8%8B%E7%9A%84%E5%A4%84%E7%90%86/" title="大模型基础-01-GPT的数据流向和损失计算, 以及SFT情景下的处理"><img src="/img/huggingface.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="大模型基础-01-GPT的数据流向和损失计算, 以及SFT情景下的处理"/></a><div class="content"><a class="title" href="/2024/12/01/%E5%A4%A7%E6%A8%A1%E5%9E%8B%E5%9F%BA%E7%A1%80-01-GPT%E7%9A%84%E6%95%B0%E6%8D%AE%E6%B5%81%E5%90%91%E5%92%8C%E6%8D%9F%E5%A4%B1%E8%AE%A1%E7%AE%97,%20%E4%BB%A5%E5%8F%8ASFT%E6%83%85%E6%99%AF%E4%B8%8B%E7%9A%84%E5%A4%84%E7%90%86/" title="大模型基础-01-GPT的数据流向和损失计算, 以及SFT情景下的处理">大模型基础-01-GPT的数据流向和损失计算, 以及SFT情景下的处理</a><time datetime="2024-12-01T04:00:00.000Z" title="发表于 2024-12-01 12:00:00">2024-12-01</time></div></div></div></div><div class="card-widget card-categories"><div class="item-headline">
+            <i class="fas fa-folder-open"></i>
+            <span>分类</span>
+            
+          </div>
+          <ul class="card-category-list" id="aside-cat-list">
+            <li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E7%AE%97%E6%B3%95/"><span class="card-category-list-name">算法</span><span class="card-category-list-count">19</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E7%B3%BB%E7%BB%9F/"><span class="card-category-list-name">系统</span><span class="card-category-list-count">2</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E8%AF%84%E6%B5%8B/"><span class="card-category-list-name">评测</span><span class="card-category-list-count">2</span></a></li>
+          </ul></div><div class="card-widget card-tags"><div class="item-headline"><i class="fas fa-tags"></i><span>标签</span></div><div class="card-tag-cloud"><a href="/tags/%E5%9B%A0%E6%9E%9C%E6%A8%A1%E5%9E%8B/" style="font-size: 1.4em; color: #99a5b6">因果模型</a> <a href="/tags/%E5%A4%9A%E4%BB%BB%E5%8A%A1%E5%AD%A6%E4%B9%A0/" style="font-size: 1.3em; color: #99a1ac">多任务学习</a> <a href="/tags/%E5%88%86%E5%B8%83%E5%BC%8F%E8%AE%AD%E7%BB%83/" style="font-size: 1.2em; color: #999da3">分布式训练</a> <a href="/tags/Huggingface/" style="font-size: 1.5em; color: #99a9bf">Huggingface</a> <a href="/tags/%E5%A4%A7%E6%A8%A1%E5%9E%8B%E5%9F%BA%E7%A1%80/" style="font-size: 1.1em; color: #999">大模型基础</a> <a href="/tags/%E6%A8%A1%E5%9E%8B%E8%AF%84%E4%BC%B0/" style="font-size: 1.1em; color: #999">模型评估</a> <a href="/tags/%E6%A0%91%E6%A8%A1%E5%9E%8B/" style="font-size: 1.1em; color: #999">树模型</a> <a href="/tags/%E5%A4%A7%E6%A8%A1%E5%9E%8B%E8%B0%83%E7%A0%94/" style="font-size: 1.1em; color: #999">大模型调研</a></div></div><div class="card-widget card-archives">
+    <div class="item-headline">
+      <i class="fas fa-archive"></i>
+      <span>归档</span>
+      
+    </div>
+    <ul class="card-archive-list">
+  
+      <li class="card-archive-list-item">
+        <a class="card-archive-list-link" href="/archives/2025/01/">
+          <span class="card-archive-list-date">一月 2025</span>
+          <span class="card-archive-list-count">3</span>
+        </a>
+      </li>
+    
+      <li class="card-archive-list-item">
+        <a class="card-archive-list-link" href="/archives/2024/12/">
+          <span class="card-archive-list-date">十二月 2024</span>
+          <span class="card-archive-list-count">2</span>
+        </a>
+      </li>
+    
+      <li class="card-archive-list-item">
+        <a class="card-archive-list-link" href="/archives/2024/11/">
+          <span class="card-archive-list-date">十一月 2024</span>
+          <span class="card-archive-list-count">7</span>
+        </a>
+      </li>
+    
+      <li class="card-archive-list-item">
+        <a class="card-archive-list-link" href="/archives/2024/10/">
+          <span class="card-archive-list-date">十月 2024</span>
+          <span class="card-archive-list-count">9</span>
+        </a>
+      </li>
+    
+      <li class="card-archive-list-item">
+        <a class="card-archive-list-link" href="/archives/2024/09/">
+          <span class="card-archive-list-date">九月 2024</span>
+          <span class="card-archive-list-count">2</span>
+        </a>
+      </li>
+    </ul></div><div class="card-widget card-webinfo"><div class="item-headline"><i class="fas fa-chart-line"></i><span>网站信息</span></div><div class="webinfo"><div class="webinfo-item"><div class="item-name">文章数目 :</div><div class="item-count">23</div></div><div class="webinfo-item"><div class="item-name">本站访客数 :</div><div class="item-count" id="busuanzi_value_site_uv"><i class="fa-solid fa-spinner fa-spin"></i></div></div><div class="webinfo-item"><div class="item-name">本站总浏览量 :</div><div class="item-count" id="busuanzi_value_site_pv"><i class="fa-solid fa-spinner fa-spin"></i></div></div><div class="webinfo-item"><div class="item-name">最后更新时间 :</div><div class="item-count" id="last-push-date" data-lastPushDate="2025-01-05T11:03:07.113Z"><i class="fa-solid fa-spinner fa-spin"></i></div></div></div></div></div></div></main><footer id="footer" style="background: transparent;"><div id="footer-wrap"><div class="copyright">&copy;2019 - 2025 By LI QIAN</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="darkmode" type="button" title="日间和夜间模式切换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><div class="js-pjax"></div><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>

@@ -1,0 +1,197 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>Huggingface-PreTrain-01-MLM | IAN's SITE</title><meta name="author" content="LI QIAN"><meta name="copyright" content="LI QIAN"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="整理中">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Huggingface-PreTrain-01-MLM">
+<meta property="og:url" content="https://blog.iansite.tech/2025/01/04/Huggingface-PreTrain-01-MLM/index.html">
+<meta property="og:site_name" content="IAN&#39;s SITE">
+<meta property="og:description" content="整理中">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://blog.iansite.tech/img/huggingface.png">
+<meta property="article:published_time" content="2025-01-04T04:00:00.000Z">
+<meta property="article:modified_time" content="2025-01-04T04:00:00.000Z">
+<meta property="article:author" content="LI QIAN">
+<meta property="article:tag" content="Huggingface">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://blog.iansite.tech/img/huggingface.png"><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="https://blog.iansite.tech/2025/01/04/Huggingface-PreTrain-01-MLM/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css"><script>
+    (() => {
+      
+    const saveToLocal = {
+      set: (key, value, ttl) => {
+        if (!ttl) return
+        const expiry = Date.now() + ttl * 86400000
+        localStorage.setItem(key, JSON.stringify({ value, expiry }))
+      },
+      get: key => {
+        const itemStr = localStorage.getItem(key)
+        if (!itemStr) return undefined
+        const { value, expiry } = JSON.parse(itemStr)
+        if (Date.now() > expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return value
+      }
+    }
+
+    window.btf = {
+      saveToLocal,
+      getScript: (url, attr = {}) => new Promise((resolve, reject) => {
+        const script = document.createElement('script')
+        script.src = url
+        script.async = true
+        Object.entries(attr).forEach(([key, val]) => script.setAttribute(key, val))
+        script.onload = script.onreadystatechange = () => {
+          if (!script.readyState || /loaded|complete/.test(script.readyState)) resolve()
+        }
+        script.onerror = reject
+        document.head.appendChild(script)
+      }),
+      getCSS: (url, id) => new Promise((resolve, reject) => {
+        const link = document.createElement('link')
+        link.rel = 'stylesheet'
+        link.href = url
+        if (id) link.id = id
+        link.onload = link.onreadystatechange = () => {
+          if (!link.readyState || /loaded|complete/.test(link.readyState)) resolve()
+        }
+        link.onerror = reject
+        document.head.appendChild(link)
+      }),
+      addGlobalFn: (key, fn, name = false, parent = window) => {
+        if (!false && key.startsWith('pjax')) return
+        const globalFn = parent.globalFn || {}
+        globalFn[key] = globalFn[key] || {}
+        globalFn[key][name || Object.keys(globalFn[key]).length] = fn
+        parent.globalFn = globalFn
+      }
+    }
+  
+      
+      const activateDarkMode = () => {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      const activateLightMode = () => {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+
+      btf.activateDarkMode = activateDarkMode
+      btf.activateLightMode = activateLightMode
+
+      const theme = saveToLocal.get('theme')
+    
+          theme === 'dark' ? activateDarkMode() : theme === 'light' ? activateLightMode() : null
+        
+      
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        document.documentElement.classList.toggle('hide-aside', asideStatus === 'hide')
+      }
+    
+      
+    const detectApple = () => {
+      if (/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)) {
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+  
+    })()
+  </script><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false,"highlightFullpage":true,"highlightMacStyle":true},
+  copy: {
+    success: '复制成功',
+    error: '复制失败',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  dateSuffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'null',
+  Snackbar: undefined,
+  infinitegrid: {
+    js: 'https://cdn.jsdelivr.net/npm/@egjs/infinitegrid/dist/infinitegrid.min.js',
+    buttonText: '加载更多'
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: false,
+  },
+  autoDarkmode: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: 'Huggingface-PreTrain-01-MLM',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: false,
+  isShuoshuo: false
+}</script><!-- hexo injector head_end start -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css">
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/hexo-math@4.0.0/dist/style.css">
+<!-- hexo injector head_end end --><meta name="generator" content="Hexo 7.3.0"></head><body><div id="web_bg" style="background: linear-gradient(20deg, #dfb7ac, #a99cad, #9f8fa7, #a99cad);"></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img text-center"><img src="/img/avatar.jpg" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data text-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">23</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">8</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">3</div></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 主页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 时间轴</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友情链接</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url(/img/huggingface_long.png);"><nav id="nav"><span id="blog-info"><a class="nav-site-title" href="/"><span class="site-name">IAN's SITE</span></a><a class="nav-page-title" href="/"><span class="site-name">Huggingface-PreTrain-01-MLM</span></a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 主页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 时间轴</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友情链接</span></a></div></div><div id="toggle-menu"><span class="site-page"><i class="fas fa-bars fa-fw"></i></span></div></div></nav><div id="post-info"><h1 class="post-title">Huggingface-PreTrain-01-MLM</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2025-01-04T04:00:00.000Z" title="发表于 2025-01-04 12:00:00">2025-01-04</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2025-01-04T04:00:00.000Z" title="更新于 2025-01-04 12:00:00">2025-01-04</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/%E7%AE%97%E6%B3%95/">算法</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title=""><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">浏览量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="container post-content" id="article-container"><p>整理中</p>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta"><i class="fas fa-circle-user fa-fw"></i>文章作者: </span><span class="post-copyright-info"><a href="https://blog.iansite.tech">LI QIAN</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta"><i class="fas fa-square-arrow-up-right fa-fw"></i>文章链接: </span><span class="post-copyright-info"><a href="https://blog.iansite.tech/2025/01/04/Huggingface-PreTrain-01-MLM/">https://blog.iansite.tech/2025/01/04/Huggingface-PreTrain-01-MLM/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta"><i class="fas fa-circle-exclamation fa-fw"></i>版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来源 <a href="https://blog.iansite.tech" target="_blank">IAN's SITE</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/Huggingface/">Huggingface</a></div><div class="post-share"><div class="social-share" data-image="/img/huggingface.png" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><a class="pagination-related" href="/2025/01/04/Huggingface-PreTrain-02-CausalLM(GPT)/" title="Huggingface-PreTrain-02-CausalLM(GPT)"><img class="cover" src="/img/huggingface.png" onerror="onerror=null;src='/img/404.jpg'" alt="cover of previous post"><div class="info"><div class="info-1"><div class="info-item-1">上一篇</div><div class="info-item-2">Huggingface-PreTrain-02-CausalLM(GPT)</div></div><div class="info-2"><div class="info-item-1">整理中 </div></div></div></a><a class="pagination-related" href="/2024/12/10/%E5%A4%A7%E6%A8%A1%E5%9E%8B%E8%B0%83%E7%A0%94-01-Qwen2%E5%92%8CQwen2VL/" title="大模型调研-Qwen2和Qwen2VL"><img class="cover" src="/img/huggingface.png" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="info text-right"><div class="info-1"><div class="info-item-1">下一篇</div><div class="info-item-2">大模型调研-Qwen2和Qwen2VL</div></div><div class="info-2"><div class="info-item-1">模型结构Qwen2-1.5B 模型结构123456789101112131415161718192021222324252627Qwen2ForCausalLM(  (model): Qwen2Model(    (embed_tokens): Embedding(151936, 1536)    (layers): ModuleList(      (0-27): 28 x Qwen2DecoderLayer(        (self_attn): Qwen2SdpaAttention(          (q_proj): Linear(in_features=1536, out_features=1536, bias=True)          (k_proj): Linear(in_features=1536, out_features=256, bias=True)          (v_proj): Linear(in_features=1536, out_features=256, bias=True)          (o_proj):...</div></div></div></a></nav><div class="relatedPosts"><div class="headline"><i class="fas fa-thumbs-up fa-fw"></i><span>相关推荐</span></div><div class="relatedPosts-list"><a class="pagination-related" href="/2025/01/05/Huggingface-PEFT-01-Prompt-Tuning/" title="Huggingface-PEFT-01-Prompt-Tuning"><img class="cover" src="/img/huggingface.png" alt="cover"><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2025-01-05</div><div class="info-item-2">Huggingface-PEFT-01-Prompt-Tuning</div></div><div class="info-2"><div class="info-item-1">整理中 </div></div></div></a><a class="pagination-related" href="/2025/01/04/Huggingface-PreTrain-02-CausalLM(GPT)/" title="Huggingface-PreTrain-02-CausalLM(GPT)"><img class="cover" src="/img/huggingface.png" alt="cover"><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2025-01-04</div><div class="info-item-2">Huggingface-PreTrain-02-CausalLM(GPT)</div></div><div class="info-2"><div class="info-item-1">整理中 </div></div></div></a><a class="pagination-related" href="/2024/10/01/Huggingface-%E5%9F%BA%E7%A1%80%E9%83%A8%E5%88%86-01-Pipeline/" title="Huggingface-基础部分-01-Pipeline"><img class="cover" src="/img/huggingface.png" alt="cover"><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2024-10-01</div><div class="info-item-2">Huggingface-基础部分-01-Pipeline</div></div><div class="info-2"><div class="info-item-1">Pipeline背后实现 Pipeline 的主要作用是简化了一些常用推理的实现, 其实现的功能, 背后的逻辑如下:    初始化 Tokenizer  tokenizer = AutoTokenizer.from_pretrained(model_id_or_path)   初始化 Model  model = AutoModelForSequenceClassification.from_pretrained(model_id_or_path)   数据预处理  input_text = “I love you” input_ids = tokenizer.encode(input_text, return_tensors=’pt’)   模型预测  res_logits = model(input_ids).logits   结果后处理  pred = torch.argmax(torch.softmax(res_logits, dim=-1)).item() result = model.config.id2label[pred]    使用示例我们可以通过:...</div></div></div></a><a class="pagination-related" href="/2024/10/01/Huggingface-%E5%9F%BA%E7%A1%80%E9%83%A8%E5%88%86-02-Tokenizer/" title="Huggingface-基础部分-02-Tokenizer"><img class="cover" src="/img/huggingface.png" alt="cover"><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2024-10-01</div><div class="info-item-2">Huggingface-基础部分-02-Tokenizer</div></div><div class="info-2"><div class="info-item-1">基本使用在自然语言处理(NLP)任务中, 文本需要被模型理解和处理, 而最关键的一步就是“分词” (tokenization). HuggingFace 提供了非常强大且易用的分词工具, 能够快速实现从文本到模型可处理的张量(tensor)的转换:   加载保存(from_pretrained / save_pretrained)  句子分词(tokenize)  查看词典(vocab)  索引转换(convert_tokens_to_ids / convert_ids_to_tokens)  填充截断(padding / truncation)  其他输入(attention_mask / token_type_ids)   123456789101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960from transformers import AutoTokenizersen = &quot;弱小的我也有大梦想!&quot;#...</div></div></div></a><a class="pagination-related" href="/2024/10/03/Huggingface-%E5%9F%BA%E7%A1%80%E9%83%A8%E5%88%86-04-Evaluate/" title="Huggingface-基础部分-04-Evaluate"><img class="cover" src="/img/huggingface.png" alt="cover"><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2024-10-03</div><div class="info-item-2">Huggingface-基础部分-04-Evaluate</div></div><div class="info-2"><div class="info-item-1">整理中 </div></div></div></a><a class="pagination-related" href="/2024/10/02/Huggingface-%E5%9F%BA%E7%A1%80%E9%83%A8%E5%88%86-03-DataSets%20%E5%92%8C%20DataCollator/" title="Huggingface-基础部分-03-DataSets 和 DataCollator"><img class="cover" src="/img/huggingface.png" alt="cover"><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2024-10-02</div><div class="info-item-2">Huggingface-基础部分-03-DataSets 和 DataCollator</div></div><div class="info-2"><div class="info-item-1">基本使用 加载在线数据集(load_dataset)  加载数据集某一项任务(load_dataset)  按照数据集划分进行加载(load_dataset)  查看数据集(index and slice)  数据集划分(train_test_split)  数据选取与过滤(select and filter)  数据映射(map)  保存与加载(save_to_disk / load_from_disk)   数据集加载12345678# 加载在线数据集datasets = load_dataset(&quot;madao33/new-title-chinese&quot;) -&gt; DatasetDict# 加载数据集合集的某一项任务datasets = load_dataset(&quot;super_glue&quot;, &quot;boolq&quot;) -&gt; DatasetDict# 按照数据集划分加载datasets = load_dataset(&quot;madao33/new-title-chinese&quot;,...</div></div></div></a></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info text-center"><div class="avatar-img"><img src="/img/avatar.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info-name">LI QIAN</div><div class="author-info-description"></div><div class="site-data"><a href="/archives/"><div class="headline">文章</div><div class="length-num">23</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">8</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">3</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/li508q"><i class="fab fa-github"></i><span>Follow Me</span></a><div class="card-info-social-icons"><a class="social-icon" href="https://github.com/li508q" target="_blank" title="Github"><i class="fab fa-github" style="color: #24292e;"></i></a><a class="social-icon" href="mailto:liqian508@outlook.com" target="_blank" title="Email"><i class="fas fa-envelope" style="color: #4a7dbe;"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">This is my Blog</div></div><div class="sticky_layout"><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2025/01/05/Huggingface-PEFT-01-Prompt-Tuning/" title="Huggingface-PEFT-01-Prompt-Tuning"><img src="/img/huggingface.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Huggingface-PEFT-01-Prompt-Tuning"/></a><div class="content"><a class="title" href="/2025/01/05/Huggingface-PEFT-01-Prompt-Tuning/" title="Huggingface-PEFT-01-Prompt-Tuning">Huggingface-PEFT-01-Prompt-Tuning</a><time datetime="2025-01-05T04:00:00.000Z" title="发表于 2025-01-05 12:00:00">2025-01-05</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2025/01/04/Huggingface-PreTrain-02-CausalLM(GPT)/" title="Huggingface-PreTrain-02-CausalLM(GPT)"><img src="/img/huggingface.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Huggingface-PreTrain-02-CausalLM(GPT)"/></a><div class="content"><a class="title" href="/2025/01/04/Huggingface-PreTrain-02-CausalLM(GPT)/" title="Huggingface-PreTrain-02-CausalLM(GPT)">Huggingface-PreTrain-02-CausalLM(GPT)</a><time datetime="2025-01-04T06:00:00.000Z" title="发表于 2025-01-04 14:00:00">2025-01-04</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2025/01/04/Huggingface-PreTrain-01-MLM/" title="Huggingface-PreTrain-01-MLM"><img src="/img/huggingface.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Huggingface-PreTrain-01-MLM"/></a><div class="content"><a class="title" href="/2025/01/04/Huggingface-PreTrain-01-MLM/" title="Huggingface-PreTrain-01-MLM">Huggingface-PreTrain-01-MLM</a><time datetime="2025-01-04T04:00:00.000Z" title="发表于 2025-01-04 12:00:00">2025-01-04</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2024/12/10/%E5%A4%A7%E6%A8%A1%E5%9E%8B%E8%B0%83%E7%A0%94-01-Qwen2%E5%92%8CQwen2VL/" title="大模型调研-Qwen2和Qwen2VL"><img src="/img/huggingface.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="大模型调研-Qwen2和Qwen2VL"/></a><div class="content"><a class="title" href="/2024/12/10/%E5%A4%A7%E6%A8%A1%E5%9E%8B%E8%B0%83%E7%A0%94-01-Qwen2%E5%92%8CQwen2VL/" title="大模型调研-Qwen2和Qwen2VL">大模型调研-Qwen2和Qwen2VL</a><time datetime="2024-12-10T04:00:00.000Z" title="发表于 2024-12-10 12:00:00">2024-12-10</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2024/12/01/%E5%A4%A7%E6%A8%A1%E5%9E%8B%E5%9F%BA%E7%A1%80-01-GPT%E7%9A%84%E6%95%B0%E6%8D%AE%E6%B5%81%E5%90%91%E5%92%8C%E6%8D%9F%E5%A4%B1%E8%AE%A1%E7%AE%97,%20%E4%BB%A5%E5%8F%8ASFT%E6%83%85%E6%99%AF%E4%B8%8B%E7%9A%84%E5%A4%84%E7%90%86/" title="大模型基础-01-GPT的数据流向和损失计算, 以及SFT情景下的处理"><img src="/img/huggingface.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="大模型基础-01-GPT的数据流向和损失计算, 以及SFT情景下的处理"/></a><div class="content"><a class="title" href="/2024/12/01/%E5%A4%A7%E6%A8%A1%E5%9E%8B%E5%9F%BA%E7%A1%80-01-GPT%E7%9A%84%E6%95%B0%E6%8D%AE%E6%B5%81%E5%90%91%E5%92%8C%E6%8D%9F%E5%A4%B1%E8%AE%A1%E7%AE%97,%20%E4%BB%A5%E5%8F%8ASFT%E6%83%85%E6%99%AF%E4%B8%8B%E7%9A%84%E5%A4%84%E7%90%86/" title="大模型基础-01-GPT的数据流向和损失计算, 以及SFT情景下的处理">大模型基础-01-GPT的数据流向和损失计算, 以及SFT情景下的处理</a><time datetime="2024-12-01T04:00:00.000Z" title="发表于 2024-12-01 12:00:00">2024-12-01</time></div></div></div></div></div></div></main><footer id="footer" style="background: transparent;"><div id="footer-wrap"><div class="copyright">&copy;2019 - 2025 By LI QIAN</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="日间和夜间模式切换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><div class="js-pjax"><script>(() => {
+  const loadMathjax = () => {
+    if (!window.MathJax) {
+      window.MathJax = {
+        tex: {
+          inlineMath: [['$', '$'], ['\\(', '\\)']],
+          tags: 'none',
+        },
+        chtml: {
+          scale: 1.1
+        },
+        options: {
+          enableMenu: true,
+          renderActions: {
+            findScript: [10, doc => {
+              for (const node of document.querySelectorAll('script[type^="math/tex"]')) {
+                const display = !!node.type.match(/; *mode=display/)
+                const math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display)
+                const text = document.createTextNode('')
+                node.parentNode.replaceChild(text, node)
+                math.start = {node: text, delim: '', n: 0}
+                math.end = {node: text, delim: '', n: 0}
+                doc.math.push(math)
+              }
+            }, '']
+          }
+        }
+      }
+      
+      const script = document.createElement('script')
+      script.src = 'https://cdn.jsdelivr.net/npm/mathjax/es5/tex-mml-chtml.min.js'
+      script.id = 'MathJax-script'
+      script.async = true
+      document.head.appendChild(script)
+    } else {
+      MathJax.startup.document.state(0)
+      MathJax.texReset()
+      MathJax.typesetPromise()
+    }
+  }
+
+  btf.addGlobalFn('encrypt', loadMathjax, 'mathjax')
+  window.pjax ? loadMathjax() : window.addEventListener('load', loadMathjax)
+})()</script></div><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>
