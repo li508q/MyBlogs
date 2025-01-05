@@ -1,5 +1,5 @@
 ---
-title: 大模型基础-01-GPT的数据流向和损失计算, 以及SFT情景下的处理
+title: NLP-01-GPT
 date: 2024-11-30 12:00:00
 updated: 2024-11-30 12:00:00
 cover: /img/huggingface.png
@@ -7,6 +7,10 @@ top_img: /img/huggingface_long.png
 tags: 大模型基础
 categories: 算法
 ---
+
+> 本文的重点放在GPT式模型的数据流向和损失计算, 以及其在SFT情景下的处理
+> 
+> 有关 GPT 结构, 诸如 decoder-only, positional encoding等会在有关Transformer的文章中介绍
 
 1. **模型结构与序列长度的关系**  
     首先，tokens的长度并不会从定义上影响Transformer网络的结构。Transformer的计算本质是对Embedding向量进行处理，因此无论输入的序列长度（N）是多少，Transformer的结构（层数、头数、隐藏维度等）并不发生变化。
