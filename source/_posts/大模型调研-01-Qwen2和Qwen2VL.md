@@ -1,6 +1,6 @@
 ---
 title: 大模型调研-Qwen2和Qwen2VL
-top: true
+top: 999
 date: 2024-12-10 12:00:00
 updated: 2024-12-10 12:00:00
 cover: /img/huggingface.png
