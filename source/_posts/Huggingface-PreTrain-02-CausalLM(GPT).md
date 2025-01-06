@@ -29,7 +29,7 @@ categories: 框架
 - 基于上文 tokens 预测当前 token
 - 结束位置需要有特殊字符 eos_token, 使语言学习到生成结束的信息
 
-## 实战
+## 流程细节
 
 数据集: pleisto/wikipedia-cn-20230720-filtered
 预训练模型: Langboat/bloom-389m-zh

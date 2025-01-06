@@ -28,7 +28,7 @@ categories: 框架
 - 将一些位置的 tokens 替换成特殊字符 \[MASK\]
 - 预测这些被替换的字符, 只计算掩码部分的 loss, 其余部分不计算 loss
 
-## 实战
+## 流程细节
 
 数据集: pleisto/wikipedia-cn-20230720-filtered
 预训练模型: hfl/chinese-macbert-base
