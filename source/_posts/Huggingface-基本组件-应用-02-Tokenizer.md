@@ -1,5 +1,5 @@
 ---
-title: Huggingface-基础部分-02-Tokenizer
+title: Huggingface-基本组件-应用-02-Tokenizer
 date: 2024-11-13 12:00:00
 updated: 2024-11-13 12:00:00
 cover: /img/huggingface.png

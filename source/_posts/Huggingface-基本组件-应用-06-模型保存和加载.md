@@ -1,5 +1,5 @@
 ---
-title: Huggingface-基础部分-06-模型保存和加载
+title: Huggingface-基本组件-应用-06-模型保存和加载
 date: 2024-12-01 12:00:00
 updated: 2024-12-01 12:00:00
 cover: /img/huggingface.png

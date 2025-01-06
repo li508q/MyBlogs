@@ -1,5 +1,5 @@
 ---
-title: Huggingface-基础部分-03-DataSets 和 DataCollator
+title: Huggingface-基本组件-应用-03-DataSets 和 DataCollator
 date: 2024-11-16 12:00:00
 updated: 2024-11-16 12:00:00
 cover: /img/huggingface.png

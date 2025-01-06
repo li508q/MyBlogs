@@ -1,5 +1,5 @@
 ---
-title: Huggingface-基础部分-01-Pipeline
+title: Huggingface-基本组件-应用-01-Pipeline
 date: 2024-11-10 12:00:00
 updated: 2024-11-10 12:00:00
 cover: /img/huggingface.png
