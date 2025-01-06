@@ -1,6 +1,6 @@
 ---
 title: Huggingface-PEFT-01-Prompt-Tuning
-description: 整理中
+description: 如何使用PEFT进行Prompt-Tuning
 date: 2025-01-05 12:00:00
 updated: 2025-01-05 12:00:00
 cover: /img/huggingface.png

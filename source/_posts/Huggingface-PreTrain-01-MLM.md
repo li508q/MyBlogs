@@ -1,6 +1,6 @@
 ---
 title: Huggingface-PreTrain-01-MLM
-description: 整理中
+description: 掩码语言模型MLM的训练流程
 date: 2025-01-04 12:00:00
 updated: 2025-01-04 12:00:00
 cover: /img/huggingface.png

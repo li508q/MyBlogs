@@ -1,6 +1,6 @@
 ---
 title: Huggingface-PreTrain-02-CausalLM(GPT)
-description: 整理中
+description: 因果语言模型CausalLM的训练流程
 date: 2025-01-04 20:00:00
 updated: 2025-01-04 20:00:00
 cover: /img/huggingface.png
