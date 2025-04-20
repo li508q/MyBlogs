@@ -2,10 +2,10 @@
 title: VERL-01-Ray Dashboard 服务监听
 date: 2025-04-20 17:15:00
 updated: 2025-04-20 17:15:00
-tags: VERL; Ray
-categories: 框架
 cover: /img/VolcanoEngine.png
 top_img: /img/VolcanoEngine_long.png
+tags: VERL
+categories: 框架
 ---
 
 ## 任务背景
