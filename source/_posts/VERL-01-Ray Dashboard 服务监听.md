@@ -1,8 +1,8 @@
 ---
-title: 强化学习-大模型-VERL-Ray集群使用
+title: VERL-01-Ray Dashboard 服务监听
 date: 2025-04-20 17:15:00
 updated: 2025-04-20 17:15:00
-tags: 大模型强化学习, VERL框架, Ray集群
+tags: VERL; Ray
 categories: 框架
 ---
 
