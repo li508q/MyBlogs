@@ -5,7 +5,7 @@ updated: 2025-04-20 17:15:00
 tags: VERL; Ray
 categories: 框架
 cover: /img/VolcanoEngine.png
-top_img: /img/VolcanoEngine.png
+top_img: /img/VolcanoEngine_long.png
 ---
 
 ## 任务背景
